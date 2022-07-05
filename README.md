@@ -31,6 +31,18 @@
 <br/>
 </div>
 
+### Special Remarks
+The following changes have been made to make the pm2 deploy process(Transpiled with coffee script × pm2 runs in cluster mode) work with logapp-frontend
+
+**＜lib/ProcessContainer.js#L115＞**
+```bash
+(Before) coffee-script
+(After) coffeescript
+```
+
+Following [this documentation](https://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2), pm2 runs in fork mode.
+
+---------------------
 
 PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.
 
